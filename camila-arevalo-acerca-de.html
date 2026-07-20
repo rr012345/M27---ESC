@@ -1,0 +1,392 @@
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+    <title>ESC | PROYECTOS</title>
+    <meta name="description" content="PROYECTOS" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://aframe.io/releases/0.9.0/aframe.min.js"></script>
+    <script src="/script.js"></script>
+
+    <!-- import the webpage's tylesheet -->
+    <link rel="stylesheet" href="/style.css" />
+
+    <script
+      type="module"
+      src="https://unpkg.com/@google/model-viewer/dist/model-viewer.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"
+    ></script>
+		<style>
+      
+      body {overflow: hidden;
+                      cursor: url('assets/Cursor_ESC.svg'), auto;
+        
+  background-color: black;
+  background-repeat: no-repeat;
+    background-attachment: fixed;
+  background-size: cover;
+background-position: center;
+}
+      			a { color: #ffffff; }
+      
+      a:link{
+      text-decoration: none!important;
+      cursor: pointer;
+      }
+      
+      
+      
+      .tooltip-content {
+    display: none;
+    position: absolute;
+top: 110%;
+    left: 0%;
+    background-color: transparent;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.tooltip-link:hover .tooltip-content {
+    display: block;
+}
+   
+      			#info {
+				position: absolute;
+				top: 50%; width: 100%;
+				color: white;
+				padding: 5px;
+				font-family: futura;
+				font-size: 30px;
+				text-align: center;
+
+			}
+      
+            #top {
+				position: absolute;
+				top: 5%; width: 100%;
+				color: white;
+				padding: 5px;
+				font-family: futura;
+				font-size: 17px;
+				text-align: center;
+
+			}
+      
+                  
+      @media only screen and (min-width: 1025px) {        
+            #capa1{ position:absolute;
+
+overflow: hidden;
+              overflow-x: hidden;
+              z-index:4;
+             top:4%;
+             left:2%;
+              width:6%;
+              font-size:21px; 
+              align:left;
+              color: black;
+                            font-color: black;
+              				font-family: arial;
+                    				text-align: center;
+
+
+            }}
+      
+       @media only screen and (min-width: 768px) and (max-width: 1024px){       
+            #capa1{ position:absolute;
+                         overflow: hidden;
+              overflow-x: hidden;
+              z-index:4;
+             top:4%;
+             left:3px;
+              width:100%;
+              align:left;
+              color: black;
+             font-size:27px; 
+                    				text-align: center;
+                            				font-family: arial;
+
+            }}
+      
+       @media only screen and (max-width: 767px) {       
+            #capa1{ position:absolute;
+                         overflow: hidden;
+              overflow-x: hidden;
+              z-index:4;
+
+             top:4%;
+             left:3%;
+              width:20%;
+              align:left;
+              color: black;
+              font-size:11px;
+                    				text-align: center;
+                            				font-family: arial;
+
+
+            }}
+      
+                            @media only screen and (min-width: 1025px) {        
+            #capa1a{ position:fixed;
+                         overflow: hidden;
+              overflow-x: hidden;
+              z-index:3;
+             top:4%;
+             right:2%;
+              width:100%;
+              font-size:12px; 
+              align:right;
+              color: black;
+                            font-color: black;
+              				font-family: arial;
+                    				text-align: center;
+              font-weight: lighter;
+
+
+            }}
+      
+       @media only screen and (min-width: 768px) and (max-width: 1024px){       
+            #capa1a{ position:absolute;
+                         overflow: hidden;
+              overflow-x: hidden;
+              z-index:3;
+             top:0%;
+             right:2%;
+              width:100%;
+              align:right;
+              color: black;
+             font-size:27px; 
+                    				text-align: center;
+                            				font-family: arial;
+
+            }}
+      
+       @media only screen and (max-width: 767px) {       
+            #capa1a{ position:absolute;
+                         overflow: hidden;
+              overflow-x: hidden;
+              z-index:3;
+             top:4%;
+             right:3%;
+              width:100%;
+              align:right;
+              color: black;
+              font-size:11px;
+                    				text-align: center;
+                            				font-family: arial;
+
+
+            }}
+      
+                   @media only screen and (min-width: 1025px) {        
+            #capa2{ position:fixed;
+                              pointer-events: none;
+              z-index:1;
+             top:92%;
+             left:0px;
+              width:100%;
+              font-size:12px; 
+              align:center;
+              color: white;
+              				font-family: arial;
+                    				text-align: center;
+
+
+            }}
+      
+       @media only screen and (min-width: 768px) and (max-width: 1024px){       
+            #capa2{ position:fixed;
+                              pointer-events: none;
+              z-index:1;
+             top:92%;
+             left:0px;
+              width:100%;
+              align:center;
+              color: white;
+             font-size:27px; 
+                    				text-align: center;
+                            				font-family: arial;
+
+            }}
+      
+       @media only screen and (max-width: 767px) {       
+            #capa2{ position:fixed;
+                              pointer-events: none;
+              z-index:1;
+             top:92%;
+             left:0px;
+              width:100%;
+              align:center;
+              color: white;
+              font-size:10px;
+                    				text-align: center;
+                            				font-family: arial;
+
+
+            }}
+      
+     
+                    @media only screen and (min-width: 1025px) {        
+            #capa3{  position:absolute;
+                      overflow-x: hidden;
+        overflow-y: auto;
+              z-index:1;
+             top:50%;
+                      transform: translate(0%, -50%);
+             right:10%;
+              width:35%;
+              height: 50%;
+              font-size:12px; 
+              align:center;
+              color: white;
+              				font-family: arial;
+                    				text-align: center;
+
+
+            }}
+      
+       @media only screen and (min-width: 768px) and (max-width: 1024px){       
+            #capa3{ position:fixed;
+              z-index:1;
+             top:60%;
+             left:0px;
+              width:100%;
+              align:center;
+              color: white;
+             font-size:27px; 
+                    				text-align: center;
+                            				font-family: arial;
+
+            }}
+      
+       @media only screen and (max-width: 767px) {       
+            #capa3{ position:fixed;
+              z-index:1;
+              overflow-x: hidden;
+        overflow-y: auto;
+             bottom:10%;
+             right:10%;
+              width:80%;
+              Height: 60%;
+              align:center;
+              color: white;
+              font-size:12px;
+                    				text-align: center;
+                            				font-family: arial;
+
+
+            }}
+      
+                          @media only screen and (min-width: 1025px) {        
+            #capa3a{ position:fixed;
+              z-index:1;
+             top:50%;
+                      transform: translate(0%, -50%);
+             left:10%;
+              width:35%;
+              font-size:39px; 
+              align:left;
+              color: white;
+                              line-height: 100%;
+              				font-family: arial;
+                    				text-align: left;
+
+
+            }}
+      
+       @media only screen and (min-width: 768px) and (max-width: 1024px){       
+            #capa3a{ position:fixed;
+              z-index:1;
+             top:60%;
+             left:0px;
+              width:100%;
+              align:center;
+              color: white;
+             font-size:27px; 
+                    				text-align: center;
+                            				font-family: arial;
+
+            }}
+      
+       @media only screen and (max-width: 767px) {       
+            #capa3a{ position:fixed;
+              z-index:1;
+             top:15%;
+             right:10%;
+              width:80%;
+              align:center;
+              color: white;
+              font-size:27px;
+                    				text-align: justify;
+                            				font-family: arial;
+
+
+            }}
+      
+      
+      
+               #model2{
+              position: absolute;
+           z-index:20;
+              top: 0%;
+           left:0%;
+              align:left;
+           overflow: hidden;
+              overflow-x: hidden;
+              width:100%;
+           height:100%;
+              color: white;
+            }
+      
+      
+		</style>
+    
+	</head>
+
+	<body>
+
+    
+<div id="capa1">
+<a href="https:/index01.html"><img src="assets/Logo_ESC.svg" align="left"          
+     width="100%"
+></a>
+    </div> 
+    
+    <div id="capa1a">
+      <table class="default" align="right" cellspacing="2%">
+
+  <tr>
+
+    <td><a href="https:/camila_arevalo.html"><b>← ATRAS</b></a></td>
+
+  </tr>
+</table>
+    </div> 
+    
+         <div id="capa3"> 
+            <p style="text-align: justify;">
+Artista interdisciplinaria cuya obra se desenvuelve en los campos del performance, las artes visuales, la instalación y la gestión cultural comunitaria. Residiendo entre Ibagué y Bogotá, Colombia, su trabajo profundiza en temáticas como el pos-humanismo, las políticas de identidad, las dimensiones políticas del arte, la construcción discursiva de la historia y la poscolonialidad. Arévalo crea narrativas alternativas e hipotéticas que desafían las jerarquías de poder desde una perspectiva centrada en el cuerpo. Su formación incluye el programa Epistemologías del Sur del Consejo Latinoamericano de Ciencias Sociales y una graduación en Artes Plásticas y Visuales de la Universidad del Tolima. Ha sido galardonada con becas y reconocimientos de instituciones como el Ministerio de Cultura de Colombia, la Alcaldía de Bogotá y la Alcaldía de Ibagué, y ganó el segundo lugar en el Premio Arte Joven 2020 de Colsanitas y la Embajada de España en Colombia, además de ser nominada al Premio VI Bienal de Bogotá en 2022. Su enfoque interdisciplinario y compromiso con la exploración de temas contemporáneos hacen de su obra una expresión artística destacada en la escena actual.
+           </p>
+            <p style="text-align: justify;">
+              Su obra forma parte de colecciones públicas y privadas del Museo de Arte Moderno de Bogotá, Museo de Arte delTolima y la Colección Colsanitas.
+               </p>
+           
+           <p style="text-align: justify;">
+"Barbarroja" es una performance que explora los códigos de los caracteres sexuales secundarios en relación con los códigos indumentarios, un tema que ha sido central en la investigación de la artista. En esta obra, Arevalo utiliza pinzas depilatorias para arrancar el vello facial de su rostro, simbolizando la eliminación de rasgos sexuales masculinos no deseados y cualquier identidad preconcebida. Durante el proceso, se genera un rastro de sangre e irritación en su piel, y el vello facial arrancado se coloca sobre papel como un vestigio de fibra capilar, testigo de la acción realizada y como un receptáculo de los restos de un cuerpo que sigue vivo. El contexto de esta obra se relaciona con las medidas estatales impuestas durante la cuarentena en Colombia, específicamente el toque de queda basado en el género (pico y género), que legitimó el control patriarcal sobre los cuerpos, otorgando a las fuerzas policiales el poder de clasificar, validar y castigar a las personas en función de su género en el espacio público. Al mismo tiempo, permitió que civiles se convirtieran en agentes de violencia hacia personas transgénero y de género no conforme. En esta ocasión ESC realiza una iteración sobre la pieza audiovisual recreando a través de la distorsión digital las múltiples identidades que la artista plantea en su obra.
+           </p>
+    </div> 
+    
+             <div id="capa3a"> 
+            <h ><b>Camila Arevalo</b></h>
+
+    </div>
+    
+ <div id="capa2" style="user-select: none;"> 
+  <br>  
+ <a>Bogotá, COL | Sequences to delete</a>
+  </div>   
+
+	</body>
+</html>						

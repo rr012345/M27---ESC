@@ -1,0 +1,387 @@
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+    <title>ESC | PROYECTOS</title>
+    <meta name="description" content="PROYECTOS" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://aframe.io/releases/0.9.0/aframe.min.js"></script>
+    <script src="/script.js"></script>
+
+    <!-- import the webpage's tylesheet -->
+    <link rel="stylesheet" href="/style.css" />
+
+    <script
+      type="module"
+      src="https://unpkg.com/@google/model-viewer/dist/model-viewer.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"
+    ></script>
+		<style>
+      
+      body {overflow: hidden;
+                      cursor: url('assets/Cursor_ESC.svg'), auto;
+        
+  background-color: black;
+  background-repeat: no-repeat;
+    background-attachment: fixed;
+  background-size: cover;
+background-position: center;
+}
+      			a { color: #ffffff; }
+      
+      a:link{
+      text-decoration: none!important;
+      cursor: pointer;
+      }
+      
+      
+      
+      .tooltip-content {
+    display: none;
+    position: absolute;
+top: 110%;
+    left: 0%;
+    background-color: transparent;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.tooltip-link:hover .tooltip-content {
+    display: block;
+}
+   
+      			#info {
+				position: absolute;
+				top: 50%; width: 100%;
+				color: white;
+				padding: 5px;
+				font-family: futura;
+				font-size: 30px;
+				text-align: center;
+
+			}
+      
+            #top {
+				position: absolute;
+				top: 5%; width: 100%;
+				color: white;
+				padding: 5px;
+				font-family: futura;
+				font-size: 17px;
+				text-align: center;
+
+			}
+      
+                  
+      @media only screen and (min-width: 1025px) {        
+            #capa1{ position:absolute;
+
+overflow: hidden;
+              overflow-x: hidden;
+              z-index:4;
+             top:4%;
+             left:2%;
+              width:6%;
+              font-size:21px; 
+              align:left;
+              color: black;
+                            font-color: black;
+              				font-family: arial;
+                    				text-align: center;
+
+
+            }}
+      
+       @media only screen and (min-width: 768px) and (max-width: 1024px){       
+            #capa1{ position:absolute;
+                         overflow: hidden;
+              overflow-x: hidden;
+              z-index:4;
+             top:4%;
+             left:3px;
+              width:100%;
+              align:left;
+              color: black;
+             font-size:27px; 
+                    				text-align: center;
+                            				font-family: arial;
+
+            }}
+      
+       @media only screen and (max-width: 767px) {       
+            #capa1{ position:absolute;
+                         overflow: hidden;
+              overflow-x: hidden;
+              z-index:4;
+
+             top:4%;
+             left:3%;
+              width:20%;
+              align:left;
+              color: black;
+              font-size:11px;
+                    				text-align: center;
+                            				font-family: arial;
+
+
+            }}
+      
+                            @media only screen and (min-width: 1025px) {        
+            #capa1a{ position:fixed;
+                         overflow: hidden;
+              overflow-x: hidden;
+              z-index:3;
+             top:4%;
+             right:2%;
+              width:100%;
+              font-size:12px; 
+              align:right;
+              color: black;
+                            font-color: black;
+              				font-family: arial;
+                    				text-align: center;
+              font-weight: lighter;
+
+
+            }}
+      
+       @media only screen and (min-width: 768px) and (max-width: 1024px){       
+            #capa1a{ position:absolute;
+                         overflow: hidden;
+              overflow-x: hidden;
+              z-index:3;
+             top:0%;
+             right:2%;
+              width:100%;
+              align:right;
+              color: black;
+             font-size:27px; 
+                    				text-align: center;
+                            				font-family: arial;
+
+            }}
+      
+       @media only screen and (max-width: 767px) {       
+            #capa1a{ position:absolute;
+                         overflow: hidden;
+              overflow-x: hidden;
+              z-index:3;
+             top:4%;
+             right:3%;
+              width:100%;
+              align:right;
+              color: black;
+              font-size:11px;
+                    				text-align: center;
+                            				font-family: arial;
+
+
+            }}
+      
+                   @media only screen and (min-width: 1025px) {        
+            #capa2{ position:fixed;
+                              pointer-events: none;
+              z-index:1;
+             top:92%;
+             left:0px;
+              width:100%;
+              font-size:12px; 
+              align:center;
+              color: white;
+              				font-family: arial;
+                    				text-align: center;
+
+
+            }}
+      
+       @media only screen and (min-width: 768px) and (max-width: 1024px){       
+            #capa2{ position:fixed;
+                              pointer-events: none;
+              z-index:1;
+             top:92%;
+             left:0px;
+              width:100%;
+              align:center;
+              color: white;
+             font-size:27px; 
+                    				text-align: center;
+                            				font-family: arial;
+
+            }}
+      
+       @media only screen and (max-width: 767px) {       
+            #capa2{ position:fixed;
+                              pointer-events: none;
+              z-index:1;
+             top:92%;
+             left:0px;
+              width:100%;
+              align:center;
+              color: white;
+              font-size:10px;
+                    				text-align: center;
+                            				font-family: arial;
+
+
+            }}
+      
+     
+                    @media only screen and (min-width: 1025px) {        
+            #capa3{  position:absolute;
+                      overflow-x: hidden;
+        overflow-y: auto;
+              z-index:1;
+             top:50%;
+                      transform: translate(0%, -50%);
+             right:10%;
+              width:35%;
+              height: 50%;
+              font-size:12px; 
+              align:center;
+              color: white;
+              				font-family: arial;
+                    				text-align: center;
+
+
+            }}
+      
+       @media only screen and (min-width: 768px) and (max-width: 1024px){       
+            #capa3{ position:fixed;
+              z-index:1;
+             top:60%;
+             left:0px;
+              width:100%;
+              align:center;
+              color: white;
+             font-size:27px; 
+                    				text-align: center;
+                            				font-family: arial;
+
+            }}
+      
+       @media only screen and (max-width: 767px) {       
+            #capa3{ position:fixed;
+              z-index:1;
+              overflow-x: hidden;
+        overflow-y: auto;
+             bottom:10%;
+             right:10%;
+              width:80%;
+              Height: 60%;
+              align:center;
+              color: white;
+              font-size:12px;
+                    				text-align: center;
+                            				font-family: arial;
+
+
+            }}
+      
+                          @media only screen and (min-width: 1025px) {        
+            #capa3a{ position:fixed;
+              z-index:1;
+             top:50%;
+                      transform: translate(0%, -50%);
+             left:10%;
+              width:35%;
+              font-size:39px; 
+              align:left;
+              color: white;
+                              line-height: 100%;
+              				font-family: arial;
+                    				text-align: left;
+
+
+            }}
+      
+       @media only screen and (min-width: 768px) and (max-width: 1024px){       
+            #capa3a{ position:fixed;
+              z-index:1;
+             top:60%;
+             left:0px;
+              width:100%;
+              align:center;
+              color: white;
+             font-size:27px; 
+                    				text-align: center;
+                            				font-family: arial;
+
+            }}
+      
+       @media only screen and (max-width: 767px) {       
+            #capa3a{ position:fixed;
+              z-index:1;
+             top:15%;
+             right:10%;
+              width:80%;
+              align:center;
+              color: white;
+              font-size:27px;
+                    				text-align: justify;
+                            				font-family: arial;
+
+
+            }}
+      
+      
+      
+               #model2{
+              position: absolute;
+           z-index:20;
+              top: 0%;
+           left:0%;
+              align:left;
+           overflow: hidden;
+              overflow-x: hidden;
+              width:100%;
+           height:100%;
+              color: white;
+            }
+      
+      
+		</style>
+    
+	</head>
+
+	<body>
+
+    
+<div id="capa1">
+<a href="https:/index01.html"><img src="assets/Logo_ESC.svg" align="left"          
+     width="100%"
+></a>
+    </div> 
+    
+    <div id="capa1a">
+      <table class="default" align="right" cellspacing="2%">
+
+  <tr>
+
+    <td><a href="juan_david_figueroa.html"><b>← ATRAS</b></a></td>
+
+  </tr>
+</table>
+    </div> 
+    
+         <div id="capa3"> 
+            <p style="text-align: justify;">
+Artista y diseñador de nuevos medios enfocado en la comprensión multidisciplinaria de las artes, derivada de la experimentación, la curiosidad e indagación de lugares inexplorados. La colaboración y cooperación con músicos y artistas visuales son elementos clave en su proceso creativo. Su pasión por visualizar experiencias sonoras lo ha llevado a experimentar con la tecnología y a crear nuevas estéticas visuales que pueden adoptar la forma de un videoclip, una instalación o una obra de realidad virtual. Establece diálogos entre espacios físicos y entornos virtuales para encontrar relaciones poéticas entre la informática y la materialidad, explorando cómo la tecnología está moldeando la conexión entre los seres humanos y la naturaleza en nuestra experiencia contemporánea. Con una Maestría en Computer Arts en School of Visual Arts en Nueva York y un pregrado en Diseño con énfasis en Comunicación y Producto de la Universidad de los Andes, Figueroa destaca como un creador que abraza la intersección entre el arte, la tecnología y la naturaleza.           
+     </p>
+           <p style="text-align: justify;">
+"STILL, LIFE" es un proyecto interactivo que explora las posibles relaciones entre humanos, plantas y tecnología. A través de un jardín físico, el artista invita al espectador a interactuar a través del tacto para explorar los efectos de la transmisión entre lo orgánico y lo digital. La relación mística individual con el mundo natural ha intentado de todas las maneras posibles capturar una belleza sublime. Es a través de la representación visual que los seres humanos pueden preservar, interpretar y capturar una realidad, y al virtualizarla, se le otorga una nueva presencia. Para Figueroa, es indudable que la era digital ha transformado nuestra relación con la naturaleza, ahora mediada por la tecnología. "STILL, LIFE" explora esta relación paradójica, presentando enfoques especulativos sobre la conexión y la coexistencia. Esta obra se presenta a través del registro considerado como vestigio de la acción instalativa. ESC recrea un ensayo visual para comprender las dinámicas que el artista plantea en esta supuesta relación entre elementos botánicos y mecánicos, creando metáforas que discuten sobre la identidad sur-global desde la pertenencia biológica.    </p>
+    </div> 
+    
+             <div id="capa3a"> 
+            <h ><b>Juan David Figueroa</b></h>
+
+    </div>
+    
+ <div id="capa2" style="user-select: none;"> 
+  <br>  
+ <a>Bogotá, COL | Sequences to delete</a>
+  </div>   
+
+	</body>
+</html>						

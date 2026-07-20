@@ -1,0 +1,638 @@
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+    <title>ESC | PROYECTOS</title>
+    <meta name="description" content="PROYECTOS" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://aframe.io/releases/0.9.0/aframe.min.js"></script>
+    <script src="/script.js"></script>
+
+    <!-- import the webpage's tylesheet -->
+    <link rel="stylesheet" href="/style.css" />
+
+    <script
+      type="module"
+      src="https://unpkg.com/@google/model-viewer/dist/model-viewer.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"
+    ></script>
+		<style>
+      
+      body {overflow: hidden;
+                      cursor: url('assets/Cursor_ESC.svg'), auto;
+        
+ background:url('assets/07-Namz.gif');
+        background-repeat: no-repeat;
+    background-attachment: fixed;
+  background-size: cover;
+background-position: center;
+}
+      			a { color: #ffffff; }
+      
+      a:link{
+      text-decoration: none!important;
+      cursor: pointer;
+      }
+   
+      .bg-video {
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-size: cover;
+  background: no-repeat center;
+  margin-left: 0vw;
+  user-select: none;
+  pointer-events: none;
+
+  /*custom styles, for example grayscale appearance*/
+  filter: grayscale(0.8);
+
+  /*additional tweaks for positioning, read more in the link above*/
+  height: 100%;
+  width: 177.77777778vh; /* 100 * 16 / 9 */
+  min-width: 100%;
+  min-height: 56.25vw; /* 100 * 9 / 16 */
+}
+      
+      .tooltip-content {
+    display: none;
+    position: absolute;
+top: 110%;
+    left: 0%;
+    background-color: transparent;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.tooltip-link:hover .tooltip-content {
+    display: block;
+}
+   
+      			#info {
+				position: absolute;
+				top: 50%; width: 100%;
+				color: white;
+				padding: 5px;
+				font-family: futura;
+				font-size: 30px;
+				text-align: center;
+
+			}
+      
+            #top {
+				position: absolute;
+				top: 5%; width: 100%;
+				color: white;
+				padding: 5px;
+				font-family: futura;
+				font-size: 17px;
+				text-align: center;
+
+			}
+      
+                  
+     @media only screen and (min-width: 1025px) {        
+            #capa1{ position:absolute;
+
+overflow: hidden;
+              overflow-x: hidden;
+              z-index:4;
+             top:4%;
+             left:2%;
+              width:6%;
+              font-size:21px; 
+              align:left;
+              color: black;
+                            font-color: black;
+              				font-family: arial;
+                    				text-align: center;
+
+
+            }}
+      
+       @media only screen and (min-width: 768px) and (max-width: 1024px){       
+            #capa1{ position:absolute;
+                         overflow: hidden;
+              overflow-x: hidden;
+              z-index:4;
+             top:4%;
+             left:3px;
+              width:100%;
+              align:left;
+              color: black;
+             font-size:27px; 
+                    				text-align: center;
+                            				font-family: arial;
+
+            }}
+      
+       @media only screen and (max-width: 767px) {       
+            #capa1{ position:absolute;
+                         overflow: hidden;
+              overflow-x: hidden;
+              z-index:4;
+
+             top:4%;
+             left:3%;
+              width:20%;
+              align:left;
+              color: black;
+              font-size:11px;
+                    				text-align: center;
+                            				font-family: arial;
+
+
+            }}
+      
+                             @media only screen and (min-width: 1025px) {        
+            #capa1a{ position:fixed;
+                         overflow: hidden;
+              overflow-x: hidden;
+              z-index:3;
+             top:4%;
+             right:2%;
+              width:100%;
+              font-size:12px; 
+              align:right;
+              color: black;
+                            font-color: black;
+              				font-family: arial;
+                    				text-align: center;
+              font-weight: lighter;
+
+
+            }}
+      
+       @media only screen and (min-width: 768px) and (max-width: 1024px){       
+            #capa1a{ position:absolute;
+                         overflow: hidden;
+              overflow-x: hidden;
+              z-index:3;
+             top:0%;
+             right:2%;
+              width:100%;
+              align:right;
+              color: black;
+             font-size:27px; 
+                    				text-align: center;
+                            				font-family: arial;
+
+            }}
+      
+ @media only screen and (max-width: 767px) {       
+            #capa1a{ position:absolute;
+                         overflow: hidden;
+              overflow-x: hidden;
+              z-index:3;
+             top:3%;
+             right:3%;
+              width:100%;
+              align:right;
+              color: black;
+              font-size:11px;
+                    				text-align: center;
+                            				font-family: arial;
+   }}
+      
+      
+                   @media only screen and (min-width: 1025px) {        
+            #capa2{ position:absolute;
+                              pointer-events: none;
+              z-index:1;
+             top:50%;
+             left:50%;
+              width:30%;
+              transform: translate(-50%, -50%);
+              font-size:12px; 
+              align:center;
+              color: white;
+              				font-family: arial;
+                    				text-align: center;
+
+
+            }}
+      
+       @media only screen and (min-width: 768px) and (max-width: 1024px){       
+            #capa2{ position:fixed;
+                              pointer-events: none;
+              z-index:1;
+             top:92%;
+             left:0px;
+              width:100%;
+              align:center;
+              color: white;
+             font-size:27px; 
+                    				text-align: center;
+                            				font-family: arial;
+
+            }}
+      
+       @media only screen and (max-width: 767px) {       
+            #capa2{ position:fixed;
+                              pointer-events: none;
+              z-index:1;
+             top:50%;
+             left:50%;
+              width:40%;
+              transform: translate(-50%, -50%);
+              align:center;
+              color: white;
+              font-size:10px;
+                    				text-align: center;
+                            				font-family: arial;
+
+
+            }}
+      
+     
+                    @media only screen and (min-width: 1025px) {        
+            #capa3{ position:absolute;
+                      overflow-x: hidden;
+        overflow-y: auto;
+              z-index:1;
+             top:50%;
+transform: translate(0%, -50%);
+              left:50%;
+              width:30%;
+              height: 40%;
+              font-size:12px; 
+              align:left;
+              color: white;
+                line-height: 150%;
+              				font-family: arial;
+                    				text-align: left;
+
+
+            }}
+      
+       @media only screen and (min-width: 768px) and (max-width: 1024px){       
+            #capa3{ position:fixed;
+              z-index:1;
+             top:60%;
+             left:0px;
+              width:100%;
+              align:center;
+              color: #ffa90a;
+             font-size:27px; 
+                    				text-align: center;
+                            				font-family: arial;
+
+            }}
+      
+       @media only screen and (max-width: 767px) {       
+            #capa3{ position:fixed;
+              z-index:1;
+              overflow-x: hidden;
+        overflow-y: auto;
+  top:50%;
+                      transform: translate(0%, -50%);
+             right:0%;
+              width:50%;
+              Height: 50%;
+              align:center;
+              color: white;
+              font-size:10px;
+                    				text-align: center;
+                            				font-family: arial;
+
+
+            }}
+      
+         @media only screen and (min-width: 1025px) {        
+            #capa3a{ position:fixed;
+              
+              z-index:1;
+             bottom:0%;
+                      transform: translate(0%, 0%);
+             left:0%;
+              width:100%;
+              font-size:120px; 
+              align:left;
+              color: white;
+                line-height: 120%;
+              				font-family: arial;
+                    				text-align: left;
+
+
+            }}
+      
+       @media only screen and (min-width: 768px) and (max-width: 1024px){       
+            #capa3a{ position:fixed;
+              z-index:1;
+             bottom:10%;
+             left:0px;
+              width:100%;
+              align:center;
+              color: white;
+             font-size:27px; 
+                    				text-align: center;
+                            				font-family: arial;
+
+            }}
+      
+       @media only screen and (max-width: 767px) {       
+            #capa3a{ position:absolute;
+              z-index:1;
+bottom:-3%;                      
+             left:0%;
+              width:100%;
+              align:center;
+              color: white;
+              font-size:90px;
+                    				text-align: center;
+                            				font-family: arial;
+
+
+            }}
+      
+                          @media only screen and (min-width: 1025px) {        
+            #capa3b{ position:absolute;
+                      overflow-x: hidden;
+        overflow-y: auto;
+              z-index:1;
+             top:50%;
+             transform: translate(0%, -50%);
+             right:50%;
+              width:30%;
+              height: 40%;
+              font-size:12px; 
+              align:left;
+              color: white;
+                line-height: 150%;
+              				font-family: arial;
+                    				text-align: left;
+
+
+            }}
+      
+       @media only screen and (min-width: 768px) and (max-width: 1024px){       
+            #capa3b{ position:fixed;
+              z-index:1;
+             top:60%;
+             left:0px;
+              width:100%;
+              align:center;
+              color: #ffa90a;
+             font-size:27px; 
+                    				text-align: center;
+                            				font-family: arial;
+
+            }}
+      
+       @media only screen and (max-width: 767px) {       
+            #capa3b{ position:fixed;
+              z-index:1;
+              overflow-x: hidden;
+        overflow-y: auto;
+  top:50%;
+                      transform: translate(0%, -50%);
+             left:0%;
+              width:50%;
+              Height: 50%;
+              align:center;
+              color: white;
+              font-size:10px;
+                    				text-align: center;
+                            				font-family: arial;
+
+
+            }}
+      
+      @media only screen and (min-width: 1025px) {        
+            #capa3c{ position:absolute;
+                      overflow-x: hidden;
+        overflow-y: auto;
+              z-index:1;
+             top:60%;
+                      transform: translate(-50%, -25%);
+             left:35%;
+              width:25%;
+              height: 39%;
+              font-size:12px; 
+              align:left;
+              color: white;
+                line-height: 150%;
+              				font-family: arial;
+                    				text-align: left;
+
+
+            }}
+      
+       @media only screen and (min-width: 768px) and (max-width: 1024px){       
+            #capa3c{ position:fixed;
+              z-index:1;
+             top:60%;
+             left:0px;
+              width:100%;
+              align:center;
+              color: #ffa90a;
+             font-size:27px; 
+                    				text-align: center;
+                            				font-family: arial;
+
+            }}
+      
+       @media only screen and (max-width: 767px) {       
+            #capa3c{ position:fixed;
+              z-index:1;
+              overflow-x: hidden;
+        overflow-y: auto;
+  top:50%;
+                      transform: translate(-50%, -50%);
+             left:50%;
+              width:60%;
+              Height: 70%;
+              align:center;
+              color: white;
+              font-size:10px;
+                    				text-align: center;
+                            				font-family: arial;
+
+
+            }}
+      
+                  @media only screen and (min-width: 1025px) {        
+            #capa5a{ position:fixed;
+              overflow-x: hidden;
+              z-index:3;
+          top:50%;
+              transform: translate(0%, -50%);
+             left:2%;
+              width:2%;
+              font-size:15px; 
+              align:left;
+              color: black;
+                            font-color: black;
+              				font-family: "Courier New", Courier, monospace;
+                    				text-align: right;
+              font-weight: lighter;
+
+
+            }}
+      
+       @media only screen and (min-width: 768px) and (max-width: 1024px){       
+            #capa5a{ position:fixed;
+                              pointer-events: none;
+              z-index:1;
+             top:92%;
+             left:2%;
+              width:100%;
+              align:center;
+              color: white;
+             font-size:27px;
+                    				text-align: center;
+                            				font-family: arial;
+
+            }}
+      
+       @media only screen and (max-width: 767px) {       
+            #capa5a{ position:fixed;
+              
+              z-index:1;
+             top:50%;
+              transform: translate(0%, -50%);
+             left:3%;
+              width:6%;
+              align:right;
+              color: black;
+              font-size:10px;
+                            font-color: black;
+                    				text-align: right;
+                            				font-family: arial;
+
+
+            }}
+      
+              @media only screen and (min-width: 1025px) { 
+      #myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+width: 100%; 
+      }}
+      
+            @media only screen and (max-width: 767px) {       
+      #myVideo {
+  position: absolute;
+  right: 0%;
+  top: 50%;
+width: 100%; 
+        transform: translate(0%, -50%);
+
+      }}
+      
+                               @media only screen and (min-width: 1025px) {        
+               #model2{
+              position: absolute;
+           z-index:1;
+              top: 0%;
+           left: 0%;
+              align:left;
+           overflow: hidden;
+              overflow-x: hidden;
+              width:100%;
+                 height:100%;
+              color: black;
+            }}
+      
+       @media only screen and (min-width: 768px) and (max-width: 1024px){       
+               #model2{
+              position: absolute;
+           z-index:20;
+              top: 0%;
+           left:0%;
+              align:left;
+           overflow: hidden;
+              overflow-x: hidden;
+              width:100%;
+           height:100%;
+              color: black;
+            }}
+      
+       @media only screen and (max-width: 767px) {       
+               #model2{
+              position: absolute;
+           z-index:1;
+              top: 0%;
+           left:0%;
+              align:left;
+           overflow: hidden;
+              overflow-x: hidden;
+              width:100%;
+           height:100%;
+              color: black;
+            }}
+
+		</style>
+    
+	</head>
+
+	<body>
+
+  
+    
+<div id="capa1">
+<a href="https:/index01.html"><img src="assets/Logo_ESC.svg" align="left"          
+     width="100%"
+></a>
+    </div> 
+    
+    
+    <div id="capa1a">
+      <table class="default" align="right">
+  <tr>
+    <td align="right" style="border: 1px solid white; border-radius: 10px; padding: 5px;"><a href="https:/artistas.html"><b>← ATRAS</b><br></a></td>
+        <td><b>&emsp;</b></td>
+    <td align="right" style="border: 1px solid white; border-radius: 10px; padding: 5px;"><a href="huntertexas-acerca-de.html"><b>GTA</b></a></td>
+  </tr>
+</table>
+    </div> 
+    
+    <div id="capa3b">
+      <p style="text-align: right;">𝔄𝔭𝔬𝔠𝔞𝔩𝔦𝔭𝔰𝔱𝔦𝔨<br>Querido cyborg ax ox 1 55 99 52 48 2555 66589 998 1 221 87558 kkk:<br><br>  
+¿De qué estará hecho el universo? ¿Qué hace posible que estas palabras sean escritas, modificadas y leídas? Partícula, cable, conexiones, materia, célula, molécula, polvo, pimienta, paisajes, canciones, espinas, dispositivos, relaciones, todo se está transformando, tanto la muerte como la regeneración convergen en múltiples vórtices.
+Después del insommmmnio viene la fascinación por crearse otras formas de ser. Ahora soy aguacero de colores, emano el aliento vivo universal. ¿Cómo se siente ser un ser que puede viajar por las dimensiones?
+Estoy lista para ir al espacio, mi cuarto es la nave.<br><br>
+          
+Skipirí skipirí skipirí ya no estoy aquí CyberpoeSIa??????????????????????????????????????????????????????? ?????????????????????????????????????????????????????????????????? ?????????????????????????S???????????????????????????????????????? ???????????????????????????????????S?????????????????????????????? ????????????????S????????????????????????????????????????S???????? ?????????????FFF???????????????????????????????????????????????T?????????????????????????????????????????????????????V ¿???????????????????????????????????? ¿????????????????????????????????????? ¿? ¿???????????? ¿??????? ¿??????????????????????????? ¿????????? ¿????????????? ¿??? ‘’’’’’’’’’’’’’’’’’’’’’’’’’’’ ¿?????????? ¿???????? ¿?????????? ¿???? ¿????????????? ¿???????? ¿????????? ¿??????? ¿??????? ¿???? ¿
+ ̈ ̈ ̈ ̈ ̈ ̈ ̈<br></p>
+            
+           </div>
+    
+    <div id="capa3">
+      <p style="text-align: left;">
+******************************************************+ ́ ̈ ́ ́  ́ ́ ́ ́ ́ ̈ ̈ ̈ ̈ ̈ ̈ ̈ ̈ ̈ ̈ ̈ ̈ ̈ ̈ ̈******************** ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́+++ ̈ ̈ ̈ ̈ ̈ ̈ ̈ ̈*** *** ̈ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ̈ ̈*[[[[[[[[[[{[:..................**************************** ***********------------------  ́ ̈ ̈ ̈ ̈ ̈ ̈ ̈ ̈ ́ ́ ̈ ́ ́ ́**************************************{{{{{{{{{{{{{ {{{{{{{{{{{{{{{{{{Q{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{Q{{{{{{{{{
+{{{{{{{{{{{{{Q{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{Q{{{{{{{{{ {{{{{{{{{{{{{{{{{{{{{{{{{{{{{{ {{{{{{{{{{{{{{{{{{{{{{{{{{{{{{ {{{{{{{{{{{{{{{{{{{{{{{{{{{{ ́ ́
+ ́ ́ ́ ́*************
+       <br> ✰⋆🌟✪✨ *****************<br>
+*****;;;;;;;;;;;;;;;;;;;;;;;;;<br>
+;;;;;;;;;;;;;{{{{{:;:;;;;;;;;;<br>
+;;;; ̈ ̈* ̈***::::::::::Ñ_[ ̈ ̈[{.+- _:[ ̈[ ́-:- [_[ ̈{ ́{_[_.............,,,,,,,,,, ,,,........[ ̈[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[ [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[ [[[[[[[[[[[:{-{- ́{-.+-.
+.-<br>
+{-.<br>
+{- ́{- ́+.- ́-. ́- ́.-+ ́.- ́.- ́<br>
+{.- ́{-.+- ́+-<br>
+. ́-+ ́-.+ ́- ́+-<br>
+ ́+.- ́+.-+ ́-<br>
+-. ́. ́-+.- ́+. ́+-.- ́+.-+ ́-<br>
+ ́.- ́+.- ́.- ́.-+ ́.+-. ́+--<br>
++.- ́+.- ́.+-. ́+- ́.-+ ́.+ ́-+ ́.-<br>
+.- ́+.-+ ́.+- ́.+ ́- ́.-+ ́.<br>
+.- ́+.+-.¿-+ ́.-¿  ́+ ́+-+-++.-+-<br>
+-<br>
+.-<br>
+-+ ́-+ ́- ́+-. ́{+ ́.-+{--.-<br>
+.<br>
+-<br>
+.--<br>
+.<br>
+-<br>
+.-{.- ́+. ́-<br>
+{.-{.-</p>
+
+    </div> 
+    
+	</body>
+</html>						

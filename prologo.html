@@ -1,0 +1,411 @@
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+    <title>ESC | PROYECTOS</title>
+    <meta name="description" content="PROYECTOS" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://aframe.io/releases/0.9.0/aframe.min.js"></script>
+    <script src="/script.js"></script>
+
+    <!-- import the webpage's tylesheet -->
+    <link rel="stylesheet" href="/style.css" />
+
+    <script
+      type="module"
+      src="https://unpkg.com/@google/model-viewer/dist/model-viewer.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"
+    ></script>
+		<style>
+      
+      body {overflow: hidden;
+                      cursor: url('assets/Cursor_ESC.svg'), auto;
+        
+  background-color: black;
+  background-repeat: no-repeat;
+    background-attachment: fixed;
+  background-size: cover;
+background-position: center;
+}
+      			a { color: #ffffff; }
+      
+      a:link{
+      text-decoration: none!important;
+      cursor: pointer;
+      }
+      
+      
+      
+      .tooltip-content {
+    display: none;
+    position: absolute;
+top: 110%;
+    left: 0%;
+    background-color: transparent;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.tooltip-link:hover .tooltip-content {
+    display: block;
+}
+   
+      			#info {
+				position: absolute;
+				top: 50%; width: 100%;
+				color: white;
+				padding: 5px;
+				font-family: futura;
+				font-size: 30px;
+				text-align: center;
+
+			}
+      
+            #top {
+				position: absolute;
+				top: 5%; width: 100%;
+				color: white;
+				padding: 5px;
+				font-family: futura;
+				font-size: 17px;
+				text-align: center;
+
+			}
+      
+                  
+      @media only screen and (min-width: 1025px) {        
+            #capa1{ position:absolute;
+
+overflow: hidden;
+              overflow-x: hidden;
+              z-index:4;
+             top:4%;
+             left:2%;
+              width:6%;
+              font-size:21px; 
+              align:left;
+              color: black;
+                            font-color: black;
+              				font-family: arial;
+                    				text-align: center;
+
+
+            }}
+      
+       @media only screen and (min-width: 768px) and (max-width: 1024px){       
+            #capa1{ position:absolute;
+                         overflow: hidden;
+              overflow-x: hidden;
+              z-index:4;
+             top:4%;
+             left:3px;
+              width:100%;
+              align:left;
+              color: black;
+             font-size:27px; 
+                    				text-align: center;
+                            				font-family: arial;
+
+            }}
+      
+       @media only screen and (max-width: 767px) {       
+            #capa1{ position:absolute;
+                         overflow: hidden;
+              overflow-x: hidden;
+              z-index:4;
+
+             top:4%;
+             left:3%;
+              width:20%;
+              align:left;
+              color: black;
+              font-size:11px;
+                    				text-align: center;
+                            				font-family: arial;
+
+
+            }}
+      
+                            @media only screen and (min-width: 1025px) {        
+            #capa1a{ position:fixed;
+                         overflow: hidden;
+              overflow-x: hidden;
+              z-index:3;
+             top:4%;
+             right:2%;
+              width:100%;
+              font-size:12px; 
+              align:right;
+              color: black;
+                            font-color: black;
+              				font-family: arial;
+                    				text-align: center;
+              font-weight: lighter;
+
+
+            }}
+      
+       @media only screen and (min-width: 768px) and (max-width: 1024px){       
+            #capa1a{ position:absolute;
+                         overflow: hidden;
+              overflow-x: hidden;
+              z-index:3;
+             top:0%;
+             right:2%;
+              width:100%;
+              align:right;
+              color: black;
+             font-size:27px; 
+                    				text-align: center;
+                            				font-family: arial;
+
+            }}
+      
+       @media only screen and (max-width: 767px) {       
+            #capa1a{ position:absolute;
+                         overflow: hidden;
+              overflow-x: hidden;
+              z-index:3;
+             top:4%;
+             right:3%;
+              width:100%;
+              align:right;
+              color: black;
+              font-size:11px;
+                    				text-align: center;
+                            				font-family: arial;
+
+
+            }}
+      
+                   @media only screen and (min-width: 1025px) {        
+            #capa2{ position:fixed;
+                              pointer-events: none;
+              z-index:1;
+             top:92%;
+             left:0px;
+              width:100%;
+              font-size:12px; 
+              align:center;
+              color: white;
+              				font-family: arial;
+                    				text-align: center;
+
+
+            }}
+      
+       @media only screen and (min-width: 768px) and (max-width: 1024px){       
+            #capa2{ position:fixed;
+                              pointer-events: none;
+              z-index:1;
+             top:92%;
+             left:0px;
+              width:100%;
+              align:center;
+              color: white;
+             font-size:27px; 
+                    				text-align: center;
+                            				font-family: arial;
+
+            }}
+      
+       @media only screen and (max-width: 767px) {       
+            #capa2{ position:fixed;
+                              pointer-events: none;
+              z-index:1;
+             top:92%;
+             left:0px;
+              width:100%;
+              align:center;
+              color: white;
+              font-size:10px;
+                    				text-align: center;
+                            				font-family: arial;
+
+
+            }}
+      
+     
+                    @media only screen and (min-width: 1025px) {        
+            #capa3{  position:absolute;
+                      overflow-x: hidden;
+        overflow-y: auto;
+              z-index:1;
+             top:50%;
+                      transform: translate(0%, -50%);
+             right:10%;
+              width:35%;
+              height: 50%;
+              font-size:12px; 
+              align:center;
+              color: white;
+              				font-family: arial;
+                    				text-align: center;
+
+
+            }}
+      
+       @media only screen and (min-width: 768px) and (max-width: 1024px){       
+            #capa3{ position:fixed;
+              z-index:1;
+             top:60%;
+             left:0px;
+              width:100%;
+              align:center;
+              color: white;
+             font-size:27px; 
+                    				text-align: center;
+                            				font-family: arial;
+
+            }}
+      
+       @media only screen and (max-width: 767px) {       
+            #capa3{ position:fixed;
+              z-index:1;
+              overflow-x: hidden;
+        overflow-y: auto;
+             bottom:10%;
+             right:10%;
+              width:80%;
+              Height: 45%;
+              align:center;
+              color: white;
+              font-size:12px;
+                    				text-align: center;
+                            				font-family: arial;
+
+
+            }}
+      
+                          @media only screen and (min-width: 1025px) {        
+            #capa3a{ position:fixed;
+              z-index:1;
+             top:50%;
+                      transform: translate(0%, -50%);
+             left:10%;
+              width:35%;
+              font-size:39px; 
+              align:left;
+              color: white;
+                              line-height: 100%;
+              				font-family: arial;
+                    				text-align: left;
+
+
+            }}
+      
+       @media only screen and (min-width: 768px) and (max-width: 1024px){       
+            #capa3a{ position:fixed;
+              z-index:1;
+             top:60%;
+             left:0px;
+              width:100%;
+              align:center;
+              color: white;
+             font-size:27px; 
+                    				text-align: center;
+                            				font-family: arial;
+
+            }}
+      
+       @media only screen and (max-width: 767px) {       
+            #capa3a{ position:fixed;
+              z-index:1;
+             top:15%;
+             right:10%;
+              width:80%;
+              align:center;
+              color: white;
+              font-size:27px;
+                    				text-align: justify;
+                            				font-family: arial;
+
+
+            }}
+      
+      
+      
+               #model2{
+              position: absolute;
+           z-index:20;
+              top: 0%;
+           left:0%;
+              align:left;
+           overflow: hidden;
+              overflow-x: hidden;
+              width:100%;
+           height:100%;
+              color: white;
+            }
+      
+      
+		</style>
+    
+	</head>
+
+	<body>
+
+    
+<div id="capa1">
+<a href="https:/index01.html"><img src="assets/Logo_ESC.svg" align="left"          
+     width="100%"
+></a>
+    </div> 
+    
+    <div id="capa1a">
+      <table class="default" align="right" cellspacing="2%">
+
+  <tr>
+
+    <td align="right" style="border: 1px solid white; border-radius: 10px; padding: 5px;"><a href="https:/index.html"><b>← ATRAS</b><br></a></td>
+
+  </tr>
+</table>
+    </div> 
+    
+         <div id="capa3"> 
+           <p style="text-align: justify;">
+           Exposición colectiva <br>
+&emsp;&emsp; 01.11.2023  - 01.03.2024 <br>
+             &emsp;&emsp; Curaduría: <b>ESC (Juan Echeverría, Andres Jacome)</b>
+           </p>
+           
+           <p style="text-align: justify;">
+           <b> M27:</b> formas de matar arquetipos identitarios a través de la tecnología como arma que limpia y reconstruye la memoria de nuevas generaciones. 
+           </p>
+           
+           <p style="text-align: justify;">
+La palabra M27 representa uno de los modelos de revólver más utilizados en el sicariato colombiano. ESC retoma este concepto no como un acto violento, sino como una reflexión que alude a acciones de renuncia hacia una identidad geopolítica. Este término no tiene una definición establecida en el léxico común; es un supuesto ficticio que plantea la "muerte digital" de una identidad colectiva delimitada por una región específica: Colombia. Este proyecto busca de manera irónica acabar con estereotipos locales y así recrear una nueva imagen dentro de un espectro global en el arte digital. Esta exposición presenta diferentes conceptos que componen una interpretación especulativa de distintas formas para recodificar y autodefinir una supuesta identidad colombiana.
+           </p>
+           
+           <p style="text-align: justify;">
+La crítica autónoma individual se va formando a través de una relación recursiva y tercermundista con la tecnología. El amplio acceso a diferentes medios offline y online, como cámaras digitales, smartphones, computadoras, sistemas de videojuegos, redes sociales y plataformas de interconexión, ha generado una visión cerebral más espacial y tridimensional de la forma en que nos comunicamos con los demás y cómo conectamos las ideas locales con otras ideas globales para expresar emociones, pensamientos e inconformidades. Los artistas Camilo Acosta (Huntertexas), Camila Arévalo y Juan David Figueroa retratan este concepto al contemplar un amplio espectro de las formas de acceso a la información desde el tercer mundo, indagando en la manera en que nos globalizamos desde el sur. Sus obras ilustran a una generación milenial afectada por temas como la depresión, el suicidio, la soledad, el cuestionamiento social hacia los roles de género y la relación con la naturaleza, afectada por la virtualidad.
+           </p>
+    
+           <p style="text-align: justify;">
+Las nociones tradicionales de territorialidad y pertenencia buscan explorar cómo la tecnología y la virtualidad han transformado nuestras concepciones del espacio y su relación con la identidad. El "no territorio" se convierte en un concepto subversivo que desdibuja los límites geográficos y culturales, permitiendo una apertura a nuevas formas de expresión y conexión. De esta forma, Carlos Serrano, José Miguel Mejía, Julián Guzmán y NEA Gonorrea x Trvshologram buscan explorar en sus obras la hibridación humano-espacio, la deslocalización y la diáspora digital, desafiando las narrativas estáticas y proponiendo una visión más fluida y plural de la identidad colombiana in situ. A través de la intersección entre lo virtual y lo físico, este ideal de No-territorio invita a cuestionar cómo concebimos y experimentamos nuevas identidades en la era digital, desafiando las limitaciones impuestas por el espacio y abriendo posibilidades para la liberación geopolítica.
+           </p>
+           
+           <p style="text-align: justify;">
+La individualidad colectiva colombiana se basa en una herencia cultural. El legado, como materia presente en las obras de Mario González, Namz Anil, Nicole Ávila y Sergio Cortez (Aeondelit), plantea conexiones entre el pasado y el presente, la tradición y la vanguardia. A su vez, cuestiona cómo la iconografía local se entrelaza con las nuevas tecnologías y expresiones contemporáneas. Este discurso busca romper los estereotipos y las narrativas populares, abriendo paso a una comprensión más compleja y rica de la identidad tercermundista globalizada. Plantea un medio para reflexionar profundamente sobre la transformación y la continuidad, desafiando y redefiniendo las nociones preexistentes en la era digital colombiana.
+           </p>
+           
+           <p style="text-align: justify;">
+Este pabellón presenta una selección de artistas colombianos con el propósito de explorar las nociones de territorio, identidad y tradición para redefinir una identidad en el contexto global del sur. Este proyecto se puede definir como un ensayo visual lleno de anarquía y capricho, concebido para imaginar un escenario distópico que desafía las concepciones de una identidad colectiva en Colombia.
+           </p>
+    </div> 
+    
+             <div id="capa3a"> 
+             <img src="assets/01-M27-WHITE.png" width="100%">
+
+    </div>
+    
+ <div id="capa2" style="user-select: none;"> 
+  <br>  
+ <a>Bogotá, COL | Sequences to delete</a>
+  </div>   
+
+	</body>
+</html>						

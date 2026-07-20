@@ -1,0 +1,389 @@
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+    <title>ESC | PROYECTOS</title>
+    <meta name="description" content="PROYECTOS" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://aframe.io/releases/0.9.0/aframe.min.js"></script>
+    <script src="/script.js"></script>
+
+    <!-- import the webpage's tylesheet -->
+    <link rel="stylesheet" href="/style.css" />
+
+    <script
+      type="module"
+      src="https://unpkg.com/@google/model-viewer/dist/model-viewer.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"
+    ></script>
+		<style>
+      
+      body {overflow: hidden;
+                      cursor: url('assets/Cursor_ESC.svg'), auto;
+        
+  background-color: black;
+  background-repeat: no-repeat;
+    background-attachment: fixed;
+  background-size: cover;
+background-position: center;
+}
+      			a { color: #ffffff; }
+      
+      a:link{
+      text-decoration: none!important;
+      cursor: pointer;
+      }
+      
+      
+      
+      .tooltip-content {
+    display: none;
+    position: absolute;
+top: 110%;
+    left: 0%;
+    background-color: transparent;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.tooltip-link:hover .tooltip-content {
+    display: block;
+}
+   
+      			#info {
+				position: absolute;
+				top: 50%; width: 100%;
+				color: white;
+				padding: 5px;
+				font-family: futura;
+				font-size: 30px;
+				text-align: center;
+
+			}
+      
+            #top {
+				position: absolute;
+				top: 5%; width: 100%;
+				color: white;
+				padding: 5px;
+				font-family: futura;
+				font-size: 17px;
+				text-align: center;
+
+			}
+      
+                  
+      @media only screen and (min-width: 1025px) {        
+            #capa1{ position:absolute;
+
+overflow: hidden;
+              overflow-x: hidden;
+              z-index:4;
+             top:4%;
+             left:2%;
+              width:6%;
+              font-size:21px; 
+              align:left;
+              color: black;
+                            font-color: black;
+              				font-family: arial;
+                    				text-align: center;
+
+
+            }}
+      
+       @media only screen and (min-width: 768px) and (max-width: 1024px){       
+            #capa1{ position:absolute;
+                         overflow: hidden;
+              overflow-x: hidden;
+              z-index:4;
+             top:4%;
+             left:3px;
+              width:100%;
+              align:left;
+              color: black;
+             font-size:27px; 
+                    				text-align: center;
+                            				font-family: arial;
+
+            }}
+      
+       @media only screen and (max-width: 767px) {       
+            #capa1{ position:absolute;
+                         overflow: hidden;
+              overflow-x: hidden;
+              z-index:4;
+
+             top:4%;
+             left:3%;
+              width:20%;
+              align:left;
+              color: black;
+              font-size:11px;
+                    				text-align: center;
+                            				font-family: arial;
+
+
+            }}
+      
+                            @media only screen and (min-width: 1025px) {        
+            #capa1a{ position:fixed;
+                         overflow: hidden;
+              overflow-x: hidden;
+              z-index:3;
+             top:4%;
+             right:2%;
+              width:100%;
+              font-size:12px; 
+              align:right;
+              color: black;
+                            font-color: black;
+              				font-family: arial;
+                    				text-align: center;
+              font-weight: lighter;
+
+
+            }}
+      
+       @media only screen and (min-width: 768px) and (max-width: 1024px){       
+            #capa1a{ position:absolute;
+                         overflow: hidden;
+              overflow-x: hidden;
+              z-index:3;
+             top:0%;
+             right:2%;
+              width:100%;
+              align:right;
+              color: black;
+             font-size:27px; 
+                    				text-align: center;
+                            				font-family: arial;
+
+            }}
+      
+       @media only screen and (max-width: 767px) {       
+            #capa1a{ position:absolute;
+                         overflow: hidden;
+              overflow-x: hidden;
+              z-index:3;
+             top:4%;
+             right:3%;
+              width:100%;
+              align:right;
+              color: black;
+              font-size:11px;
+                    				text-align: center;
+                            				font-family: arial;
+
+
+            }}
+      
+                   @media only screen and (min-width: 1025px) {        
+            #capa2{ position:fixed;
+                              pointer-events: none;
+              z-index:1;
+             top:92%;
+             left:0px;
+              width:100%;
+              font-size:12px; 
+              align:center;
+              color: white;
+              				font-family: arial;
+                    				text-align: center;
+
+
+            }}
+      
+       @media only screen and (min-width: 768px) and (max-width: 1024px){       
+            #capa2{ position:fixed;
+                              pointer-events: none;
+              z-index:1;
+             top:92%;
+             left:0px;
+              width:100%;
+              align:center;
+              color: white;
+             font-size:27px; 
+                    				text-align: center;
+                            				font-family: arial;
+
+            }}
+      
+       @media only screen and (max-width: 767px) {       
+            #capa2{ position:fixed;
+                              pointer-events: none;
+              z-index:1;
+             top:92%;
+             left:0px;
+              width:100%;
+              align:center;
+              color: white;
+              font-size:10px;
+                    				text-align: center;
+                            				font-family: arial;
+
+
+            }}
+      
+     
+                    @media only screen and (min-width: 1025px) {        
+            #capa3{  position:absolute;
+                      overflow-x: hidden;
+        overflow-y: auto;
+              z-index:1;
+             top:50%;
+                      transform: translate(0%, -50%);
+             right:10%;
+              width:35%;
+              height: 50%;
+              font-size:12px; 
+              align:center;
+              color: white;
+              				font-family: arial;
+                    				text-align: center;
+
+
+            }}
+      
+       @media only screen and (min-width: 768px) and (max-width: 1024px){       
+            #capa3{ position:fixed;
+              z-index:1;
+             top:60%;
+             left:0px;
+              width:100%;
+              align:center;
+              color: white;
+             font-size:27px; 
+                    				text-align: center;
+                            				font-family: arial;
+
+            }}
+      
+       @media only screen and (max-width: 767px) {       
+            #capa3{ position:fixed;
+              z-index:1;
+              overflow-x: hidden;
+        overflow-y: auto;
+             bottom:10%;
+             right:10%;
+              width:80%;
+              Height: 60%;
+              align:center;
+              color: white;
+              font-size:12px;
+                    				text-align: center;
+                            				font-family: arial;
+
+
+            }}
+      
+                          @media only screen and (min-width: 1025px) {        
+            #capa3a{ position:fixed;
+              z-index:1;
+             top:50%;
+                      transform: translate(0%, -50%);
+             left:10%;
+              width:35%;
+              font-size:39px; 
+              align:left;
+              color: white;
+                              line-height: 100%;
+              				font-family: arial;
+                    				text-align: left;
+
+
+            }}
+      
+       @media only screen and (min-width: 768px) and (max-width: 1024px){       
+            #capa3a{ position:fixed;
+              z-index:1;
+             top:60%;
+             left:0px;
+              width:100%;
+              align:center;
+              color: white;
+             font-size:27px; 
+                    				text-align: center;
+                            				font-family: arial;
+
+            }}
+      
+       @media only screen and (max-width: 767px) {       
+            #capa3a{ position:fixed;
+              z-index:1;
+             top:15%;
+             right:10%;
+              width:80%;
+              align:center;
+              color: white;
+              font-size:27px;
+                    				text-align: justify;
+                            				font-family: arial;
+
+
+            }}
+      
+      
+      
+               #model2{
+              position: absolute;
+           z-index:20;
+              top: 0%;
+           left:0%;
+              align:left;
+           overflow: hidden;
+              overflow-x: hidden;
+              width:100%;
+           height:100%;
+              color: white;
+            }
+      
+      
+		</style>
+    
+	</head>
+
+	<body>
+
+    
+<div id="capa1">
+<a href="https:/index01.html"><img src="assets/Logo_ESC.svg" align="left"          
+     width="100%"
+></a>
+    </div> 
+    
+    <div id="capa1a">
+      <table class="default" align="right" cellspacing="2%">
+
+  <tr>
+
+    <td><a href="https:/huntertexas.html"><b>← ATRAS</b></a></td>
+
+  </tr>
+</table>
+    </div> 
+    
+         <div id="capa3"> 
+            <p style="text-align: justify;">
+Artista visual que se destaca por su exploración de la imagen a través de formatos como video arte y performance, visuales en vivo, videoclips y ensayos de imagen. Su obra combina una variedad de elementos ilustrativos, desde imágenes manipuladas hasta escaneo de libros y grabaciones de pantallas de televisión. Su enfoque artístico se centra en la representación del cuerpo desde una perspectiva tradicional de las bellas artes, yuxtaponiendo elementos iconográficos como la enfermedad, la belleza, lo místico y lo transgresor. HUNTERTEXAS crea narrativas hipnóticas y ambiguas que oscilan entre lo documental y lo experimental; su trabajo se exhibe en diversos espacios, desde clubes nocturnos y museos hasta teatros y el internet. Su obra es una exploración innovadora que desafía convenciones visuales contemporáneas y busca ampliar las posibilidades de representar su individualidad a través de  lo figurativo y lo narrativo.           
+           </p>
+           
+           <p style="text-align: justify;">
+"No 4: La Sombra de Ti" es un testimonio visual, sonoro y textual que se erige como una representación compleja y emocional, trascendiendo las barreras de la cultura popular colombiana y latinoamericana para abordar cuestiones profundas y universales de identidad. Acosta recrea la canción "La Sombra de Ti" de Shakira a través de un lipsync a un tempo lento, mientras su rostro se distorsiona digitalmente, creando una experiencia visual inquietante. El artista nos sumerge en un mundo donde la depresión, la soledad y el desamor se entrelazan con los ecos de una cultura tercermundista y milenial que celebra la melancolía. La obra incluye frases de autores que abordan el suicidio y la degradación, añadiendo una capa de profundidad teórica y narrativa. "No 4: La Sombra de Ti" plantea cuestionamientos sobre la salud mental en un contexto donde las expectativas románticas se confrontan con la realidad. De este modo, la pieza audiovisual se convierte en un ejemplo de crítica individual, donde el artista utiliza la personificación para explorar y cuestionar la influencia de la cultura popular en la formación de identidades emocionales y la necesidad de una mirada crítica hacia el entorno y la condición humana en la sociedad actual.
+    </p>
+    </div> 
+    
+             <div id="capa3a"> 
+            <h ><b>Camilo Acosta (Huntertexas)</b></h>
+
+    </div>
+    
+ <div id="capa2" style="user-select: none;"> 
+  <br>  
+ <a>Bogotá, COL | Sequences to delete</a>
+  </div>   
+
+	</body>
+</html>						

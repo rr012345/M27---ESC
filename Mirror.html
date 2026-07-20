@@ -1,0 +1,438 @@
+
+<html>
+  <head>
+            <title>ESC | TECNOSICARIATO</title>
+    <meta name="description" content="TECNOSICARIATO" />
+<script src="https://aframe.io/releases/1.2.0/aframe.min.js">
+  <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.0/dist/aframe-extras.min.js"></script>
+      <script src="https://rawgit.com/mayognaise/aframe-gif-shader/master/dist/aframe-gif-shader.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@fern-solutions/aframe-mirror@1.0.3/dist/mirror.umd.min.js"></script>  
+        <script src="https://unpkg.com/@fern-solutions/aframe-mirror/dist/mirror.umd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/diarmidmackenzie/aframe-multi-camera@latest/src/mirror.min.js"></script>	
+     <script src="https://cdn.jsdelivr.net/gh/kylebakerio/a-dynamic-reflection@1.1.0/dynamic-reflection.js"></script>
+    <script src="/script.js"></script>
+    <style type="text/css"> 
+     body {
+       
+       
+ background-color: white;}
+      
+            			a { color: black; }
+      
+      a:link{
+      text-decoration: none!important;
+      cursor: pointer;
+      }
+      
+      
+       #capa2{ position:absolute; z-index:1; }
+      
+      
+     @media only screen and (min-width: 1025px) {        
+            #capa1{ position:absolute;
+
+overflow: hidden;
+              overflow-x: hidden;
+              z-index:4;
+             top:4%;
+             left:2%;
+              width:6%;
+              font-size:21px; 
+              align:left;
+              color: black;
+                            font-color: black;
+              				font-family: arial;
+                    				text-align: center;
+
+
+            }}
+      
+       @media only screen and (min-width: 768px) and (max-width: 1024px){       
+            #capa1{ position:absolute;
+                         overflow: hidden;
+              overflow-x: hidden;
+              z-index:4;
+             top:4%;
+             left:3px;
+              width:100%;
+              align:left;
+              color: black;
+             font-size:27px; 
+                    				text-align: center;
+                            				font-family: arial;
+
+            }}
+      
+       @media only screen and (max-width: 767px) {       
+            #capa1{ position:absolute;
+                         overflow: hidden;
+              overflow-x: hidden;
+              z-index:4;
+
+             top:4%;
+             left:3%;
+              width:20%;
+              align:left;
+              color: black;
+              font-size:11px;
+                    				text-align: center;
+                            				font-family: arial;
+
+
+            }}
+      
+                            @media only screen and (min-width: 1025px) {        
+            #capa1a{ position:fixed;
+                         overflow: hidden;
+              overflow-x: hidden;
+              z-index:3;
+             top:4%;
+             right:2%;
+              width:100%;
+              font-size:12px; 
+              align:right;
+              color: black;
+                            font-color: black;
+              				font-family: arial;
+                    				text-align: center;
+              font-weight: lighter;
+
+
+            }}
+      
+       @media only screen and (min-width: 768px) and (max-width: 1024px){       
+            #capa1a{ position:absolute;
+                         overflow: hidden;
+              overflow-x: hidden;
+              z-index:3;
+             top:0%;
+             right:2%;
+              width:100%;
+              align:right;
+              color: black;
+             font-size:27px; 
+                    				text-align: center;
+                            				font-family: arial;
+
+            }}
+      
+       @media only screen and (max-width: 767px) {       
+            #capa1a{ position:absolute;
+                         overflow: hidden;
+              overflow-x: hidden;
+              z-index:3;
+             top:4%;
+             right:3%;
+              width:100%;
+              align:right;
+              color: black;
+              font-size:11px;
+                    				text-align: center;
+                            				font-family: arial;
+
+
+            }}
+      
+                         @media only screen and (min-width: 1025px) {        
+            #capa3{ position:fixed;
+              z-index:1;
+             bottom:3%;
+             left:1.5%;
+              width:9%;
+              font-size:12px; 
+              align:center;
+              color: white;
+              				font-family: arial;
+                    				text-align: center;
+
+
+            }}
+      
+       @media only screen and (min-width: 768px) and (max-width: 1024px){       
+            #capa3{ position:fixed;
+                              pointer-events: none;
+              z-index:1;
+             top:92%;
+             left:2%;
+              width:100%;
+              align:center;
+              color: white;
+             font-size:27px;
+                    				text-align: center;
+                            				font-family: arial;
+
+            }}
+      
+       @media only screen and (max-width: 767px) {       
+            #capa3{ position:fixed;
+                              pointer-events: none;
+              
+              z-index:1;
+             bottom:3%;
+             left:3%;
+              width:5%;
+              align:center;
+              color: black;
+              font-size:10px;
+                            font-color: black;
+                    				text-align: center;
+                            				font-family: arial;
+
+
+            }}
+      
+       @media only screen and (min-width: 1025px) {        
+            #capa5{ position:fixed;
+              overflow-x: hidden;
+              z-index:3;
+             bottom:3%;
+             right:2%;
+              width:12%;
+              font-size:15px; 
+              align:right;
+              color: black;
+                            font-color: black;
+              				font-family: "Courier New", Courier, monospace;
+                    				text-align: right;
+              font-weight: lighter;
+
+
+            }}
+      
+       @media only screen and (min-width: 768px) and (max-width: 1024px){       
+            #capa5{ position:fixed;
+                              pointer-events: none;
+              z-index:1;
+             top:92%;
+             left:2%;
+              width:100%;
+              align:center;
+              color: white;
+             font-size:27px;
+                    				text-align: center;
+                            				font-family: arial;
+
+            }}
+      
+       @media only screen and (max-width: 767px) {       
+            #capa5{ position:fixed;
+              
+              z-index:1;
+             bottom:3%;
+             right:3%;
+              width:100%;
+              align:right;
+              color: black;
+              font-size:10px;
+                            font-color: black;
+                    				text-align: right;
+                            				font-family: arial;
+
+
+            }}
+                        
+      @media only screen and (min-width: 1025px) {              
+      #capa4{ position:absolute;
+overflow: hidden;
+         pointer-events: none;
+              overflow-x: hidden;
+              z-index:4;
+             top:20%;
+             left:30%;
+              width:40%;
+        height:60%;
+              font-size:12px; 
+              align:center;
+              color: black;
+              				font-family: arial;
+                    				text-align: center;
+
+
+            }}
+      
+       @media only screen and (min-width: 768px) and (max-width: 1024px){       
+            #capa4{ position:absolute;
+                         overflow: hidden;
+              overflow-x: hidden;
+              padding: 3%;
+              z-index:4;
+               pointer-events: none;
+             top:0%;
+             left:0px;
+              width:100%;
+              align:left;
+              color: black;
+             font-size:27px; 
+                    				text-align: center;
+                            				font-family: arial;
+
+            }}
+      
+       @media only screen and (max-width: 767px) {       
+            #capa4{ position:relative;
+                         overflow: hidden;
+              overflow-x: hidden;
+              z-index:4;
+ pointer-events: none;
+             top:25%;
+             left:20%;
+              width:60%;
+              height:75%;
+              align:left;
+              color: black;
+              font-size:11px;
+                    				text-align: center;
+                            				font-family: arial;
+
+
+            }}
+                         
+      @media only screen and (min-width: 1025px) {             
+      #capa4a{ position:absolute;
+overflow: hidden;
+         pointer-events: none;
+              overflow-x: hidden;
+              z-index:4;
+             top:50%;
+             left:20%;
+              width:60%;
+              font-size:21px; 
+              align:left;
+              color: black;
+                            font-color: black;
+              				font-family: arial;
+                    				text-align: center;
+
+
+            }}
+      
+       @media only screen and (min-width: 768px) and (max-width: 1024px){       
+            #capa4a{ position:absolute;
+                         overflow: hidden;
+              overflow-x: hidden;
+              padding: 3%;
+              z-index:4;
+               pointer-events: none;
+             top:0%;
+             left:0px;
+              width:100%;
+              align:left;
+              color: black;
+             font-size:27px; 
+                    				text-align: center;
+                            				font-family: arial;
+
+            }}
+      
+       @media only screen and (max-width: 767px) {       
+            #capa4a{ position:absolute;
+                         overflow: hidden;
+              overflow-x: hidden;
+               z-index:6;
+top:45%;
+             left:5%;
+              width:90%;
+              align:center;
+              color: black;
+              font-size:10px;
+                            font-color: black;
+                    				text-align: center;
+                            				font-family: arial;
+
+            }}
+      
+      </style>
+</head>
+  
+  <body >
+    
+    <script>
+  AFRAME.registerComponent('modify-materials', {
+    init: function () {
+      // Wait for model to load.
+      this.el.addEventListener('model-loaded', () => {
+        // Grab the mesh / scene.
+        const obj = this.el.getObject3D('mesh');
+        // Go over the submeshes and modify materials we want.
+        obj.traverse(node => {
+          if (node.name.indexOf('ship') !== -1) {
+            node.material.color.set('red');
+          }
+        });
+      });
+    }
+  });
+</script>
+    
+        <div id="capa2">
+    <a-scene loading-screen="enabled:false" shadow="autoUpdate: false"  reflection="directionalLight:a-light#dirlight;">
+  
+      <a-sky material="transparent: true; " src="assets/final5.jpg" ></a-sky>
+
+        <a-plane 
+               id="reflective-floor-layer"
+               dynamic-reflection="fps:300; floor:true; size: 1024"
+               shadow="receive: true; cast:false;"
+               material="roughness:0;metalness:1;opacity:0.5;shader:standard;emissive:#7d7d7d;"
+               position="0 -30 0" rotation="-90 0 0" width="1000" height="1000" 
+               color="black"
+               >
+      </a-plane>   
+      
+      <a-entity position="0 12.903 -115.33519" geometry="primitive:box; width:65; height:65; depth:65" material="shader:gif;src:url(assets/Prueba_IMGS.gif)"></a-entity>
+ <a-assets>
+    <a-asset-item id="cityModel" src="assets/cubo_.gltf" mirror="resolution: 16; distance: 1000; interval: 250; repeat: true"></a-asset-item>
+  </a-assets>
+  <a-entity position="0 12.903 -115.33519" scale="12 12 12" gltf-model="#cityModel"></a-entity>
+
+
+  <a-entity obj-model="obj: #tree-obj; mtl: #tree-mtl"></a-entity>
+      
+
+  
+
+      
+          </a-scene>
+    </div>
+<div id="capa1">
+<a href="https:/index01.html"><img src="assets/Logo_ESC_N.svg" align="left"          
+     width="100%"></a>
+    </div> 
+    
+    <div id="capa1a">
+      <table class="default" align="right" style="font-size:12px;">
+
+
+  <tr>
+
+    <td><a href="https:/contacto.html"><b>PROLOGO &emsp;</b></a></td>
+    
+        <td><a href="https:/artistas.html"><b>ARTISTAS</b></a></td>
+
+  </tr>
+</table>
+    </div> 
+    
+     <div id="capa3" style="user-select: none;"> 
+<a href="https:/index01.html"><img src="assets/LOGO2.001.png" align="left"          
+     width="100%"></a>
+  </div> 
+            <div id="capa5">  
+      <b>→ ARTISTAS:</b> <br> <br>
+              <marquee scrollamount="1.5" direction="left" width="100%"> <a href="https:/huntertexas.html" >Camilo Acosta (Huntertexas) - Camilo Acosta (Huntertexas)Camilo Acosta (Huntertexas) - Camilo Acosta (Huntertexas)Camilo Acosta (Huntertexas) - Camilo Acosta (Huntertexas)Camilo Acosta (Huntertexas) - Camilo Acosta (Huntertexas)Camilo Acosta (Huntertexas) - Camilo Acosta (Huntertexas)Camilo Acosta (Huntertexas) - Camilo Acosta (Huntertexas)</a></marquee>
+          <marquee scrollamount="3" direction="left" width="100%"><a href="https:/index.html">Camila Arevalo - Camila Arevalo -Camila Arevalo -Camila Arevalo -Camila Arevalo -Camila Arevalo -Camila Arevalo</a></marquee>
+   <marquee scrollamount="2" direction="left" width="100%"><a href="https:/index.html">Carlos Serrano - Carlos Serrano - Carlos Serrano - Carlos Serrano - Carlos Serrano - Carlos Serrano - Carlos Serrano </a></marquee>
+ <marquee scrollamount="1" direction="left" width="100%"><a href="https:/index.html">Jose Miguel - Jose Miguel - Jose Miguel - Jose Miguel - Jose Miguel - Jose Miguel </a></marquee>
+ <marquee scrollamount="3" direction="left" width="100%"><a href="juan_david_figueroa.html">Juan David Figueroa - Juan David Figueroa -Juan David Figueroa -Juan David Figueroa -Juan David Figueroa</a></marquee>
+ <marquee scrollamount="2.5" direction="left" width="100%"><a href="https:/julian-guzman.html">Julian Guzman - Julian Guzman - Julian Guzman - Julian Guzman - Julian Guzman - Julian Guzman</a></marquee>
+ <marquee scrollamount="3" direction="left" width="100%"><a href="nea_gonorrea.html">Nea Gonorrea x TrasHologram - Nea Gonorrea x TrasHologram - Nea Gonorrea x TrasHologram - Nea Gonorrea x TrasHologram - Nea Gonorrea x TrasHologram - Nea Gonorrea x TrasHologram </a></marquee>
+ <marquee scrollamount="1.3" direction="left" width="100%"><a href="mario-gonzalez.html">Mario González - Mario González - Mario González - Mario González - Mario González - Mario González </a></marquee>
+ <marquee scrollamount="3" direction="left" width="100%"><a href="https:/index.html">Namz Anil - Namz Anil - Namz Anil - Namz Anil - Namz Anil - Namz Anil</a> </marquee>
+  <marquee scrollamount="2" direction="left" width="100%"><a href="https:/index.html">Nicohl Avila - Nicohl Avila - Nicohl Avila - Nicohl Avila - Nicohl Avila - Nicohl Avila </a></marquee>
+ <marquee scrollamount="3" direction="left" width="100%"><a href="https:/index.html">Nyksan - Nyksan - Nyksan - Nyksan - Nyksan - Nyksan </a></marquee>
+ <marquee scrollamount="1" direction="left" width="100%"><a href="https:/index.html">Sergio Cortez (Aeondelit) - Sergio Cortez (Aeondelit) - Sergio Cortez (Aeondelit) - Sergio Cortez (Aeondelit) - Sergio Cortez (Aeondelit) </a></marquee>
+      </div> 
+  
+    
+  </body>
+</html> 							

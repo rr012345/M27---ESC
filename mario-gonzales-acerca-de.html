@@ -1,0 +1,391 @@
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+    <title>ESC | PROYECTOS</title>
+    <meta name="description" content="PROYECTOS" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://aframe.io/releases/0.9.0/aframe.min.js"></script>
+    <script src="/script.js"></script>
+
+    <!-- import the webpage's tylesheet -->
+    <link rel="stylesheet" href="/style.css" />
+
+    <script
+      type="module"
+      src="https://unpkg.com/@google/model-viewer/dist/model-viewer.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"
+    ></script>
+		<style>
+      
+      body {overflow: hidden;
+                      cursor: url('assets/Cursor_ESC.svg'), auto;
+        
+  background-color: black;
+  background-repeat: no-repeat;
+    background-attachment: fixed;
+  background-size: cover;
+background-position: center;
+}
+      			a { color: #ffffff; }
+      
+      a:link{
+      text-decoration: none!important;
+      cursor: pointer;
+      }
+      
+      
+      
+      .tooltip-content {
+    display: none;
+    position: absolute;
+top: 110%;
+    left: 0%;
+    background-color: transparent;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.tooltip-link:hover .tooltip-content {
+    display: block;
+}
+   
+      			#info {
+				position: absolute;
+				top: 50%; width: 100%;
+				color: white;
+				padding: 5px;
+				font-family: futura;
+				font-size: 30px;
+				text-align: center;
+
+			}
+      
+            #top {
+				position: absolute;
+				top: 5%; width: 100%;
+				color: white;
+				padding: 5px;
+				font-family: futura;
+				font-size: 17px;
+				text-align: center;
+
+			}
+      
+                  
+      @media only screen and (min-width: 1025px) {        
+            #capa1{ position:absolute;
+
+overflow: hidden;
+              overflow-x: hidden;
+              z-index:4;
+             top:4%;
+             left:2%;
+              width:6%;
+              font-size:21px; 
+              align:left;
+              color: black;
+                            font-color: black;
+              				font-family: arial;
+                    				text-align: center;
+
+
+            }}
+      
+       @media only screen and (min-width: 768px) and (max-width: 1024px){       
+            #capa1{ position:absolute;
+                         overflow: hidden;
+              overflow-x: hidden;
+              z-index:4;
+             top:4%;
+             left:3px;
+              width:100%;
+              align:left;
+              color: black;
+             font-size:27px; 
+                    				text-align: center;
+                            				font-family: arial;
+
+            }}
+      
+       @media only screen and (max-width: 767px) {       
+            #capa1{ position:absolute;
+                         overflow: hidden;
+              overflow-x: hidden;
+              z-index:4;
+
+             top:4%;
+             left:3%;
+              width:20%;
+              align:left;
+              color: black;
+              font-size:11px;
+                    				text-align: center;
+                            				font-family: arial;
+
+
+            }}
+      
+                            @media only screen and (min-width: 1025px) {        
+            #capa1a{ position:fixed;
+                         overflow: hidden;
+              overflow-x: hidden;
+              z-index:3;
+             top:4%;
+             right:2%;
+              width:100%;
+              font-size:12px; 
+              align:right;
+              color: black;
+                            font-color: black;
+              				font-family: arial;
+                    				text-align: center;
+              font-weight: lighter;
+
+
+            }}
+      
+       @media only screen and (min-width: 768px) and (max-width: 1024px){       
+            #capa1a{ position:absolute;
+                         overflow: hidden;
+              overflow-x: hidden;
+              z-index:3;
+             top:0%;
+             right:2%;
+              width:100%;
+              align:right;
+              color: black;
+             font-size:27px; 
+                    				text-align: center;
+                            				font-family: arial;
+
+            }}
+      
+       @media only screen and (max-width: 767px) {       
+            #capa1a{ position:absolute;
+                         overflow: hidden;
+              overflow-x: hidden;
+              z-index:3;
+             top:4%;
+             right:3%;
+              width:100%;
+              align:right;
+              color: black;
+              font-size:11px;
+                    				text-align: center;
+                            				font-family: arial;
+
+
+            }}
+      
+                   @media only screen and (min-width: 1025px) {        
+            #capa2{ position:fixed;
+                              pointer-events: none;
+              z-index:1;
+             top:92%;
+             left:0px;
+              width:100%;
+              font-size:12px; 
+              align:center;
+              color: white;
+              				font-family: arial;
+                    				text-align: center;
+
+
+            }}
+      
+       @media only screen and (min-width: 768px) and (max-width: 1024px){       
+            #capa2{ position:fixed;
+                              pointer-events: none;
+              z-index:1;
+             top:92%;
+             left:0px;
+              width:100%;
+              align:center;
+              color: white;
+             font-size:27px; 
+                    				text-align: center;
+                            				font-family: arial;
+
+            }}
+      
+       @media only screen and (max-width: 767px) {       
+            #capa2{ position:fixed;
+                              pointer-events: none;
+              z-index:1;
+             top:92%;
+             left:0px;
+              width:100%;
+              align:center;
+              color: white;
+              font-size:10px;
+                    				text-align: center;
+                            				font-family: arial;
+
+
+            }}
+      
+     
+                    @media only screen and (min-width: 1025px) {        
+            #capa3{  position:absolute;
+                      overflow-x: hidden;
+        overflow-y: auto;
+              z-index:1;
+             top:50%;
+                      transform: translate(0%, -50%);
+             right:10%;
+              width:35%;
+              height: 50%;
+              font-size:12px; 
+              align:center;
+              color: white;
+              				font-family: arial;
+                    				text-align: center;
+
+
+            }}
+      
+       @media only screen and (min-width: 768px) and (max-width: 1024px){       
+            #capa3{ position:fixed;
+              z-index:1;
+             top:60%;
+             left:0px;
+              width:100%;
+              align:center;
+              color: white;
+             font-size:27px; 
+                    				text-align: center;
+                            				font-family: arial;
+
+            }}
+      
+       @media only screen and (max-width: 767px) {       
+            #capa3{ position:fixed;
+              z-index:1;
+              overflow-x: hidden;
+        overflow-y: auto;
+             bottom:10%;
+             right:10%;
+              width:80%;
+              Height: 60%;
+              align:center;
+              color: white;
+              font-size:12px;
+                    				text-align: center;
+                            				font-family: arial;
+
+
+            }}
+      
+                          @media only screen and (min-width: 1025px) {        
+            #capa3a{ position:fixed;
+              z-index:1;
+             top:50%;
+                      transform: translate(0%, -50%);
+             left:10%;
+              width:35%;
+              font-size:39px; 
+              align:left;
+              color: white;
+                              line-height: 100%;
+              				font-family: arial;
+                    				text-align: left;
+
+
+            }}
+      
+       @media only screen and (min-width: 768px) and (max-width: 1024px){       
+            #capa3a{ position:fixed;
+              z-index:1;
+             top:60%;
+             left:0px;
+              width:100%;
+              align:center;
+              color: white;
+             font-size:27px; 
+                    				text-align: center;
+                            				font-family: arial;
+
+            }}
+      
+       @media only screen and (max-width: 767px) {       
+            #capa3a{ position:fixed;
+              z-index:1;
+             top:15%;
+             right:10%;
+              width:80%;
+              align:center;
+              color: white;
+              font-size:27px;
+                    				text-align: justify;
+                            				font-family: arial;
+
+
+            }}
+      
+      
+      
+               #model2{
+              position: absolute;
+           z-index:20;
+              top: 0%;
+           left:0%;
+              align:left;
+           overflow: hidden;
+              overflow-x: hidden;
+              width:100%;
+           height:100%;
+              color: white;
+            }
+      
+      
+		</style>
+    
+	</head>
+
+	<body>
+
+    
+<div id="capa1">
+<a href="https:/index01.html"><img src="assets/Logo_ESC.svg" align="left"          
+     width="100%"
+></a>
+    </div> 
+    
+    <div id="capa1a">
+      <table class="default" align="right" cellspacing="2%">
+
+  <tr>
+
+    <td><a href="https:/mario-gonzalez.htmljulian-guzman.html"><b>← ATRAS</b></a></td>
+
+  </tr>
+</table>
+    </div> 
+    
+         <div id="capa3"> 
+            <p style="text-align: justify;">
+Originario de Bucaramanga, Colombia, es un artista digital experimental destacado en el ámbito del arte 3D. Su obra se centra en la exploración de la identidad a través de una expresión caracterizada por la mutación en la creación de entes, deidades y personajes ficticios cuyos cuerpos y materiales experimentan deformaciones significativas. Su indagación en el medio digital le permite adentrarse en la transformación de la forma y la materia como medios para transmitir su discurso artístico centrado en la anatomía humana. Su trabajo digital desafía las convenciones morfológicas tradicionales y busca provocar una reflexión profunda sobre la evolución de la materia orgánica en la era digital. González se presenta como un artista innovador en el campo de la simulación 3D, abriendo nuevas perspectivas para explorar las complejidades de la identidad corporal a través de la distorsión y la metamorfosis física.
+           </p>
+           <p style="text-align: justify;">
+"Seré maleable, seré resistente, seré de la forma que quiera cuando quiera", expresa en su obra "M3tal Ang3l - cuando sea de metal seré". Esta obra desafía las nociones convencionales que relacionan la anatomía humana y la identidad física. El trabajo se compone de una serie de anatomías digitales deformadas, distorsionadas y deconstruidas, donde cada simulación recrea entidades que exageran de manera provocativa las proporciones corporales, dando lugar a morfologías voluptuosas que cuestionan los estándares tradicionales de belleza y la obsesión por la perfección física. En lugar de adherirse a la imagen corporal idealizada, González sugiere que la verdadera expresión yace en la maleabilidad y la resistencia, en la capacidad de adaptarse y transformarse a voluntad propia o ajena.
+ </p>
+           <p style="text-align: justify;">
+             Esta obra plantea un discurso audaz sobre el culto al cuerpo, la plasticidad física humana y la admiración de la carne plástica en una sociedad contemporánea y perfeccionista. La elección de representar estos cuerpos en metales desgastados y, en ocasiones, oxidados puede interpretarse como una metáfora de la decadencia y la degradación de la identidad humana en un entorno obsesionado con la apariencia superficial. "M3tal Ang3l - cuando sea de metal seré" hace eco de la ambigüedad de género, cuestionando las normas predefinidas al plantear deidades andróginas, lo que desafía la percepción tradicional de la carne humana. El resultado visual se consolida como una reflexión audaz sobre la autopercepción y la capacidad de reconfigurar nuestra identidad corporal, creando diálogos sobre los estándares de belleza y la idealización del cuerpo en la era digital, y a su vez, indagando en la idea de que la belleza reside en la perfección y en su lugar abrazando la imperfección y la autoexpresión mórbida.
+           </p>
+    </div> 
+    
+             <div id="capa3a"> 
+            <h ><b>Mario Gonzalez</b></h>
+
+    </div>
+    
+ <div id="capa2" style="user-select: none;"> 
+  <br>  
+ <a>Bogotá, COL | Sequences to delete</a>
+  </div>   
+
+	</body>
+</html>						
